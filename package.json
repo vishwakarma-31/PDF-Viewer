@@ -1,0 +1,21 @@
+{
+  "name": "ai-pdf-invoice-extractor",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.10.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "deploy:web": "cd apps/web && vercel --prod",
+    "deploy:api": "cd apps/api && vercel --prod",
+    "deploy": "npm run deploy:web && npm run deploy:api",
+    "preview:web": "cd apps/web && vercel",
+    "preview:api": "cd apps/api && vercel"
+  }
+}
